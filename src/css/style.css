@@ -81,6 +81,13 @@ header div {
   background-color: var(--white-background);
   padding: 2rem;
   z-index: 1;
+  transition: 0.5s all ease-in-out;
+}
+
+.navScroll {
+  padding: 1rem 2rem;
+  transition: 0.5s all ease-in-out;
+  background-color: var(--info-btn);
 }
 
 .nav-menu div {
@@ -126,6 +133,19 @@ main {
 }
 
 /* --------------  ABOUT ----------------  */
+.about,
+.portfolio,
+.testimony,
+.contact {
+  opacity: 0;
+  transition: 0.5s all ease-in-out;
+}
+
+.showSection {
+  opacity: 1;
+  transition: 0.5s all ease-in-out;
+}
+
 .about h2 {
   text-align: center;
   text-transform: uppercase;
@@ -402,4 +422,31 @@ footer ul li a:hover,
 footer div p a:hover {
   box-shadow: inset 200px 0 0 0 var(--white-background);
   color: var(--dark-text);
+}
+
+/* --------------  SCROLL UP ----------------  */
+.scroll-up {
+  position: fixed;
+  right: 2rem;
+  bottom: -3rem;
+  display: flex;
+  background-color: var(--white-background);
+  border-radius: 50%;
+  padding: 0;
+  transition: 0.4s;
+  line-height: normal;
+}
+
+.scroll-up a {
+  font-size: 0;
+}
+
+.scroll-up a img {
+  width: 50px;
+  height: 50px;
+}
+
+/* --------------  SHOW SCROLL UP ----------------  */
+.showScroll {
+  bottom: 2rem;
 }
