@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="src/images/favicon.png" type="image/x-icon" />
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,9 +19,26 @@
   <!-- SCROLL UP -->
   <div class="scroll-up" id="scrollBtn">
     <a href="#topo">
-      <img src="src/images/up-arrow.png" alt="arrow up"/>
+      <img src="src/images/up-arrow.png" alt="arrow up" />
     </a>
   </div>
+
+  <!-- MOBILE NAVBAR -->
+  <nav class="mobileNav-menu">
+    <div>
+      <img src="src/images/Vasta.png" alt="vasta logo" />
+    </div>
+    <div>
+      <ul>
+        <li>
+          <img src="src/images/search-icon.png" alt="search icon" />
+        </li>
+        <li>
+          <img src="src/images/hamburguer-menu.png" alt="hamburguer menu icon" />
+        </li>
+      </ul>
+    </div>
+  </nav>
 
   <header id="topo">
     <div>
@@ -54,7 +73,9 @@
         </div>
         <div class="text-1">
           <div>
-            <img src="src/images/IMAGEM 1.jpg" alt="imagem 1" />
+            <figure>
+              <img src="src/images/IMAGEM 1.jpg" alt="imagem 1" />
+            </figure>
           </div>
           <div class="lorem">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci asperiores nobis labore, harum vel
@@ -85,7 +106,17 @@
               officia explicabo tempora, maiores rerum commodi quia cupiditate ad harum, corporis nemo.</p>
           </div>
           <div>
-            <img src="src/images/IMAGEM 2.jpg" alt="imagem 2" />
+            <figure>
+              <img src="src/images/IMAGEM 2.jpg" alt="imagem 2" />
+            </figure>
+          </div>
+        </div>
+        <div class="read-more">
+          <div>
+            <h3>Leia Mais</h3>
+          </div>
+          <div class="arrow-down">
+            <img src="src/images/down-arrow.png" alt="arrow down" />
           </div>
         </div>
       </article>
@@ -212,13 +243,14 @@
               <input type="text" placeholder="Nome" />
               <input type="text" placeholder="Sobrenome" />
               <input type="email" placeholder="Email" />
+              <input type="tel" placeholder="Telefone" class="mobile-version" />
             </div>
             <div class="flex gap">
               <div>
                 <textarea rows="5" cols="40">Mensagem</textarea>
               </div>
               <div class="form-bottom">
-                <input type="tel" placeholder="Telefone" />
+                <input type="tel" placeholder="Telefone" class="desktop-version" />
                 <div class="flex">
                   <p class="know-more">Todos os dados são guardadores de forma segura, saiba mais <a href="#"
                       class="link">aqui</a>
@@ -237,50 +269,61 @@
     <div class="container-1">
       <div class="border">
         <div>
-          <h3>Se inscreve para receber nosso newsletter</h3>
-          <div class="news-form">
-            <input type="email" placeholder="Email" />
-            <button class="main-btn">Inscrever-se</button>
+          <div class="footer-image mobile-logo">
+            <img src="src/images/footer_logo_360x.png" alt="vasta logo" />
           </div>
-        </div>
-        <div class="images-div">
           <div>
-            <h3>Portfólio</h3>
-          </div>
-          <div class="flex gap">
             <div>
-              <figure>
-                <img src="src/images/portfolio-imagem-2.jpg" alt="imagem 2" />
-              </figure>
-              <p><a href="#">Link 1</a></p>
+              <h3>Se inscreve para receber nosso newsletter</h3>
             </div>
-            <div>
-              <figure>
-                <img src="src/images/portfolio-imagem-3.jpg" alt="imagem 3" />
-              </figure>
-              <p><a href="#">Link 2</a></p>
-            </div>
-            <div>
-              <figure>
-                <img src="src/images/portfolio-imagem-5.jpg" alt="imagem 5" />
-              </figure>
-              <p><a href="#">Link 3</a></p>
-            </div>
-            <div>
-              <figure>
-                <img src="src/images/portfolio-imagem-4.jpg" alt="imagem 4" />
-              </figure>
-              <p><a href="#">Link 4</a></p>
+            <div class="news-form">
+              <input type="email" placeholder="Email" />
+              <button class="main-btn">Inscrever-se</button>
             </div>
           </div>
+          <div class="images-div">
+            <div>
+              <h3>Portfólio</h3>
+            </div>
+            <div class="flex gap mobile-grid">
+              <div>
+                <figure>
+                  <img src="src/images/portfolio-imagem-2.jpg" alt="imagem 2" />
+                </figure>
+                <p><a href="#">Link 1</a></p>
+              </div>
+              <div>
+                <figure>
+                  <img src="src/images/portfolio-imagem-3.jpg" alt="imagem 3" />
+                </figure>
+                <p><a href="#">Link 2</a></p>
+              </div>
+              <div>
+                <figure>
+                  <img src="src/images/portfolio-imagem-5.jpg" alt="imagem 5" />
+                </figure>
+                <p><a href="#">Link 3</a></p>
+              </div>
+              <div>
+                <figure>
+                  <img src="src/images/portfolio-imagem-4.jpg" alt="imagem 4" />
+                </figure>
+                <p><a href="#">Link 4</a></p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <div class="border">
+      <div class="border no-padding">
         <div class="flex container-2">
           <div>
-            <div>
+            <div class="mobile-style">
               <h3>Menu</h3>
+              <div class="footer-arrow-down">
+                <img src="src/images/white-down-arrow.png" alt="arrow down" />
+              </div>
             </div>
             <div>
               <ul>
@@ -291,15 +334,18 @@
               </ul>
             </div>
           </div>
-          <div>
+          <div class="mobile-style">
             <h3>Sobre</h3>
+            <div class="footer-arrow-down">
+              <img src="src/images/white-down-arrow.png" alt="arrow down" />
+            </div>
             <ul>
               <li><a href="#">Política de Privacidade</a></li>
               <li><a href="#">Termos de Uso</a></li>
             </ul>
           </div>
         </div>
-        <div class="footer-image">
+        <div class="footer-image desktop-logo">
           <img src="src/images/footer_logo_360x.png" alt="vasta logo" />
         </div>
       </div>
