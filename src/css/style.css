@@ -84,6 +84,14 @@ header div {
   transition: 0.5s all ease-in-out;
 }
 
+.nav-menu ul li:last-child {
+  display: none;
+}
+
+.modal {
+  display: none;
+}
+
 .navScroll {
   padding: 1rem 2rem;
   transition: 0.5s all ease-in-out;
@@ -478,7 +486,7 @@ footer div p a:hover {
 
   /* --------------  HEADER ----------------  */
   header {
-    margin-top: 0;
+    margin-top: 3rem;
     background-image: url("../images/BANNER\ -\ IMAGE\ -\ MOBILE.png");
     display: flex;
     text-align: center;
@@ -498,18 +506,72 @@ footer div p a:hover {
 
   /* --------------  NAVBAR ----------------  */
   .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .nav-menu ul li:nth-child(1),
+  .nav-menu ul li:nth-child(2),
+  .nav-menu ul li:nth-child(3),
+  .nav-menu ul li:nth-child(4) {
     display: none;
   }
 
-  .mobileNav-menu {
+  .nav-menu ul li:last-child {
     display: flex;
-    justify-content: space-between;
-    padding: 1rem 1rem 0 1rem;
   }
 
-  .mobileNav-menu ul img {
+  .nav-menu ul {
+    gap: 1.5rem;
+  }
+
+  .nav-menu ul img {
     width: 25px;
     height: 25px;
+  }
+
+  /* --------------  HAMBURGUER MODAL MENU ----------------  */
+  .modal {
+    background-color: var(--info-btn);
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    padding: 1rem;
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  .modal div:first-child {
+    text-align: right;
+    margin-right: 0.7rem;
+  }
+
+  .modal img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .modal ul li {
+    list-style: none;
+    padding: 0.3rem 0;
+  }
+
+  .modal ul li a {
+    color: var(--dark-text);
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    padding: 0.2rem;
+    box-shadow: inset 0 0 0 0 var(--dark-text);
+    transition: color 0.3s ease-in-out, box-shadow 0.4s ease-in-out;
+  }
+
+  .modal ul li a:hover {
+    box-shadow: inset 200px 0 0 0 var(--dark-text);
+    color: var(--white-text);
   }
 
   /* --------------  MAIN ----------------  */
@@ -547,10 +609,6 @@ footer div p a:hover {
   .text-1 figure {
     height: 200px;
   }
-
-  /* .text-1 figure img {
-    background-position: top;
-  } */
 
   .read-more {
     display: flex;

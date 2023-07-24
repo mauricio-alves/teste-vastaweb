@@ -4,6 +4,9 @@ const aboutSection = document.querySelector("#about");
 const portfolioSection = document.querySelector("#portfolio");
 const testimonySection = document.querySelector("#testimony");
 const contactSection = document.querySelector("#contact");
+const closeModal = document.querySelector("#closeModal img");
+const navModal = document.querySelector("#navModal");
+const openModal = document.querySelector("#hbIcon");
 
 const showScroll = "showScroll";
 const navScroll = "navScroll";
@@ -46,4 +49,14 @@ window.addEventListener("scroll", () => {
 // /* --------------  SHOW TESTIMONY SECTION WHEN SCROLL UP ----------------  */
 window.addEventListener("scroll", () => {
   scrollHandler(contactSection, showSection, 1600);
+});
+
+/* --------------  OPEN HAMBURGUER MODAL ----------------  */
+openModal.addEventListener("click", () => {
+  navModal.style.display = "flex";
+});
+
+/* --------------  CLOSE HAMBURGUER MODAL ----------------  */
+closeModal.addEventListener("click", () => {
+  navModal.style.display = "none";
 });
