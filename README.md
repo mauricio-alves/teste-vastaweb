@@ -10,7 +10,7 @@ Project developed using HTML, CSS and JavaScript. It's a landing page created fo
 4. Check your browser;
 5. The application will run;
 
-If you want to see the result online, please access this deploy link.
+If you want to see the result online, please access this [deploy link](https://teste-vastaweb.netlify.app/).
 
 # Desafio Vasta Web - Landing page
 
@@ -24,4 +24,4 @@ Projeto desenvolvido utilizando HTML, CSS e JavaScript. É uma landing page cria
 4. Verifique seu navegador;
 5. O aplicativo será executado;
 
-Se você quiser ver o resultado online, acesse este link de implantação.
+Se você quiser ver o resultado online, acesse este [link de implantação](https://teste-vastaweb.netlify.app/).
