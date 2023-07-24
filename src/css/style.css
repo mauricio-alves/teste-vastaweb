@@ -126,6 +126,10 @@ nav ul li a:hover {
   color: var(--white-text);
 }
 
+.mobileNav-menu {
+  display: none;
+}
+
 /* --------------  MAIN ----------------  */
 main {
   width: 1800px;
@@ -177,6 +181,10 @@ main {
 .info-btn:hover {
   animation: pulse 1s infinite;
   transition: 0.3s;
+}
+
+.read-more {
+  display: none;
 }
 
 /* --------------  PORTFOLIO ----------------  */
@@ -320,6 +328,10 @@ figure {
   text-decoration: none;
 }
 
+.mobile-version {
+  display: none;
+}
+
 /* --------------  FOOTER ----------------  */
 footer {
   background-color: var(--dark-background);
@@ -409,6 +421,11 @@ footer h3 {
   text-align: center;
 }
 
+.mobile-logo,
+.footer-arrow-down {
+  display: none;
+}
+
 footer ul li a,
 footer div p a {
   box-shadow: inset 0 0 0 0 var(--white-background);
@@ -428,13 +445,14 @@ footer div p a:hover {
 .scroll-up {
   position: fixed;
   right: 2rem;
-  bottom: -3rem;
+  bottom: -4rem;
   display: flex;
   background-color: var(--white-background);
   border-radius: 50%;
   padding: 0;
   transition: 0.4s;
   line-height: normal;
+  z-index: 1;
 }
 
 .scroll-up a {
@@ -449,4 +467,262 @@ footer div p a:hover {
 /* --------------  SHOW SCROLL UP ----------------  */
 .showScroll {
   bottom: 2rem;
+}
+
+/* --------------  RESPONSIVENESS ----------------  */
+/* --------------  MOBILE PORTRAIT ----------------  */
+@media (max-width: 414px) and (orientation: portrait) {
+  html {
+    font-size: 1rem;
+  }
+
+  /* --------------  HEADER ----------------  */
+  header {
+    margin-top: 0;
+    background-image: url("../images/BANNER\ -\ IMAGE\ -\ MOBILE.png");
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 20rem;
+  }
+
+  header div {
+    margin: 0 auto;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+
+  .main-btn {
+    margin-top: 7rem;
+  }
+
+  /* --------------  NAVBAR ----------------  */
+  .nav-menu {
+    display: none;
+  }
+
+  .mobileNav-menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem 0 1rem;
+  }
+
+  .mobileNav-menu ul img {
+    width: 25px;
+    height: 25px;
+  }
+
+  /* --------------  MAIN ----------------  */
+  main {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  /* --------------  ABOUT ----------------  */
+  .about,
+  .portfolio,
+  .testimony,
+  .contact {
+    opacity: 1;
+  }
+
+  .text-1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lorem p {
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+  }
+
+  .text-1 .info-btn {
+    display: none;
+  }
+
+  .text-1:nth-child(3) {
+    display: none;
+  }
+
+  .text-1 figure {
+    height: 200px;
+  }
+
+  /* .text-1 figure img {
+    background-position: top;
+  } */
+
+  .read-more {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 0.5rem;
+  }
+
+  .arrow-down img {
+    width: 25px;
+  }
+
+  /* --------------  PORTFOLIO ----------------  */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .grid img {
+    width: 180px;
+  }
+
+  .grid div:nth-child(5),
+  .grid div:nth-child(6) {
+    display: none;
+  }
+
+  .portfolio button {
+    padding: 20px;
+  }
+
+  /* --------------  TESTIMONY ----------------  */
+  .carousel div:nth-child(4),
+  .carousel div:nth-child(5),
+  .carousel div:nth-child(6),
+  .carousel div:nth-child(7) {
+    display: none;
+  }
+
+  .comment {
+    width: 200px;
+  }
+
+  .avatar {
+    justify-content: center;
+  }
+
+  .testimony img {
+    width: 10px;
+  }
+  .arrow img {
+    width: 20px;
+  }
+
+  /* --------------  CONTACT ----------------  */
+  .contact {
+    margin-bottom: 1rem;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .form-bottom p {
+    width: 300px;
+    text-align: center;
+    font-size: 0.6rem;
+  }
+
+  .form-bottom button {
+    margin-top: 1rem;
+  }
+
+  .mobile-version {
+    display: block;
+  }
+
+  .desktop-version {
+    display: none;
+  }
+
+  /* --------------  FOOTER ----------------  */
+  footer h3 {
+    text-align: center;
+  }
+
+  .container-1 {
+    flex-direction: column;
+    width: 400px;
+  }
+
+  .container-1 img {
+    width: 150px;
+  }
+
+  .news-form button {
+    margin-top: 0;
+  }
+
+  .news-form input {
+    padding: 0 0 0 10px;
+    width: 65%;
+  }
+
+  .news-form button {
+    width: 35%;
+  }
+
+  .news-form button {
+    padding: 15px 0;
+  }
+
+  .images-div {
+    margin: 0;
+  }
+
+  .mobile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 1rem;
+  }
+
+  .mobile-grid p {
+    background-color: rgb(69, 67, 67);
+    margin-bottom: 1rem;
+  }
+
+  .container-2 {
+    padding: 0;
+    width: 365px;
+    margin: 0;
+  }
+
+  .container-2 ul {
+    display: none;
+  }
+
+  .container-2:nth-child(1),
+  .container-2 div div:nth-child(1) {
+    border-bottom: 2px solid var(--white-background);
+  }
+
+  .no-padding {
+    padding: 0;
+  }
+
+  .mobile-logo {
+    display: block;
+  }
+
+  .mobile-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .footer-arrow-down {
+    display: block;
+  }
+  .footer-arrow-down img {
+    padding-top: 5px;
+    width: 20px;
+  }
+
+  .desktop-logo {
+    display: none;
+  }
+
+  .footer-image {
+    margin-top: 1rem;
+  }
 }
