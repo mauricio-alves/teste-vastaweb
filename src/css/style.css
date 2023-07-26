@@ -34,10 +34,10 @@ header {
   background-position: bottom;
   background-size: cover;
   height: 25rem;
+  padding: 0 2.6rem;
 }
 
 header div {
-  width: 1800px;
   margin: 0 auto;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -82,6 +82,11 @@ header div {
   padding: 2rem;
   z-index: 1;
   transition: 0.5s all ease-in-out;
+}
+
+.nav-menu ul li:nth-child(5) img {
+  width: 20px;
+  height: 20px;
 }
 
 .nav-menu ul li:last-child {
@@ -140,8 +145,8 @@ nav ul li a:hover {
 
 /* --------------  MAIN ----------------  */
 main {
-  width: 1800px;
   margin: 0 auto;
+  padding: 0 2.6rem;
 }
 
 /* --------------  ABOUT ----------------  */
@@ -269,7 +274,6 @@ figure {
 }
 
 .comment {
-  width: 300px;
   font-size: 0.7rem;
   margin-top: 1rem;
 }
@@ -356,13 +360,13 @@ footer h3 {
 .border {
   border: 0.2rem solid var(--white-text);
   padding: 0 1rem;
+  width: 900px;
 }
 
 .container-1 {
   display: flex;
   justify-content: center;
   padding: 1rem;
-  width: 900px;
   margin: 0 auto;
 }
 
@@ -411,8 +415,8 @@ footer h3 {
   display: flex;
   justify-content: space-between;
   padding: 0 2rem;
-  width: 700px;
   margin: 0 auto;
+  gap: 10rem;
 }
 
 .container-2 ul li {
@@ -454,17 +458,8 @@ footer div p a:hover {
   position: fixed;
   right: 2rem;
   bottom: -4rem;
-  display: flex;
-  background-color: var(--white-background);
-  border-radius: 50%;
-  padding: 0;
   transition: 0.4s;
-  line-height: normal;
   z-index: 1;
-}
-
-.scroll-up a {
-  font-size: 0;
 }
 
 .scroll-up a img {
@@ -478,8 +473,84 @@ footer div p a:hover {
 }
 
 /* --------------  RESPONSIVENESS ----------------  */
+/* --------------  LAPTOP  ----------------  */
+@media (max-width: 1024px) {
+  /* --------------  ABOUT ----------------  */
+  .about-image {
+    display: flex;
+    align-items: center;
+  }
+
+  /* --------------  FOOTER ----------------  */
+  .border {
+    max-width: 500px;
+  }
+
+  .container-1 img {
+    width: 100px;
+  }
+
+  .desktop-logo img {
+    width: 150px;
+  }
+
+  .container-2 {
+    gap: 2rem;
+  }
+
+  .news-form input {
+    padding: 0 0 0 10px;
+    width: 65%;
+  }
+
+  .news-form button {
+    width: 35%;
+  }
+
+  .news-form button {
+    padding: 15px 0;
+  }
+}
+
+/* --------------  TABLET ----------------  */
+@media (max-width: 769px) {
+  /* --------------  ABOUT ----------------  */
+  .text-1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lorem {
+    text-align: center;
+  }
+
+  /* --------------  PORTFOLIO ----------------  */
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* --------------  TESTIMONY ----------------  */
+  .carousel div:nth-child(4),
+  .carousel div:nth-child(5) {
+    display: none;
+  }
+
+  /* --------------  FOOTER ----------------  */
+  .border {
+    max-width: 360px;
+  }
+
+  .container-1 img {
+    width: 60px;
+  }
+
+  .desktop-logo img {
+    width: 120px;
+  }
+}
+
 /* --------------  MOBILE PORTRAIT ----------------  */
-@media (max-width: 414px) and (orientation: portrait) {
+@media (max-width: 430px) and (orientation: portrait) {
   html {
     font-size: 1rem;
   }
@@ -576,8 +647,8 @@ footer div p a:hover {
 
   /* --------------  MAIN ----------------  */
   main {
-    width: 400px;
     margin: 0 auto;
+    padding: 0;
   }
 
   /* --------------  ABOUT ----------------  */
@@ -607,7 +678,11 @@ footer div p a:hover {
   }
 
   .text-1 figure {
-    height: 200px;
+    height: 250px;
+  }
+
+  .text-1 img {
+    width: 100vw;
   }
 
   .read-more {
@@ -710,19 +785,6 @@ footer div p a:hover {
     margin-top: 0;
   }
 
-  .news-form input {
-    padding: 0 0 0 10px;
-    width: 65%;
-  }
-
-  .news-form button {
-    width: 35%;
-  }
-
-  .news-form button {
-    padding: 15px 0;
-  }
-
   .images-div {
     margin: 0;
   }
@@ -742,6 +804,7 @@ footer div p a:hover {
     padding: 0;
     width: 365px;
     margin: 0;
+    gap: 0;
   }
 
   .container-2 ul {
